@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>Students</title>
+</head>
+<body>
+  <h2> Students are : </h2>
+  <form>
+    <input name="search" value="{{search}}" placeholder="search students...">
+    <button class="student_bt" type="submit">Search</button>
+  </form>
+  <br>
+  <ol>
+      {% for student in students %}
+      <li> <a href="{% url 'student_detail' student.pk %}">  {{student}} </a> </li>
+      {% endfor %}
+  </ol> 
+  {% endblock %}  
+</body>
+</html>

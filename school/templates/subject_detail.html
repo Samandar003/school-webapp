@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+  {% block content %}
+<title>Subject Info</title>
+</head>
+<body>
+  <h3> <a href="{% url 'subjects' %}"> Back to subjects</a> </h3>
+    <ul> 
+      <h5> Subject Name: </h5>
+      <li> {{subject.name}} </li>  
+    </ul>
+    <ul>
+      <h5>  Teachers: </h5>
+      {% for teacher in subject.teachers.all %}
+        <li> {{teacher}} </li>
+      {% endfor %}
+    </ul>
+    <ul>
+      <h5> Students: </h5>
+      {% for student in subject.students.all %}
+        <li> {{student}} </li>
+      {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>

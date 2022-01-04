@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+</head>
+
+<body>
+  {% block content %}
+  <title> School - HomePage </title>
+  
+   <h2> About my school </h2>
+   <hr>
+    
+    <p class="description"> The number of my school is 14, sherobod region of Surxondaryo district. 
+      To describe my school, I would say, it is nice to study there. I believe it comes 
+      with many advantages. One of the perks is that it is spacious. I mean, Teachers 
+      can teach students in spacious rooms and they can organise extra lessons. New
+       building added to our old school. Our new school has 3 floors.
+      In addition to this, students are good at sports. To be more accurate, we often play 
+      football especially volleyball. I make time for playig volleybal, when I am tired 
+      and to unwind. Taking volleybal as an example, I played it at the last weekend with my friends.
+      Its location is good for all. it is situated at the centre of our mahalla, one 
+      kilometre away from my house, and it takes around 10-minute walk.
+       </p>
+      <br>
+    <div class="info">
+    <h4>  Click <a href="{% url 'students_list' %}"> students </a> To get to know information about students at my school </h4>
+    <h4>  Click <a href="{% url 'teachers' %}"> teachers </a> To get to know information about teachers at my school </h4>
+    <h4>  Click <a href="{% url 'subjects' %}"> subjects </a> To get to know information about subjects at my school </h4>
+    </div>
+   {% endblock %}
+</body>
+

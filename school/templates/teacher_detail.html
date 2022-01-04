@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+  {% block content %}
+<title>Teacher Detail</title>
+</head>
+<body>
+  <a href="{% url 'teachers' %}"> <h2> Back to teachers </h2> </a>
+  <ul>
+  <li> <h3> Name: {{teacher.first_name}} </h3> </li>
+  <li> <h3> Surname: {{teacher.last_name}} </h3> </li>
+  <li> <h3> age: {{teacher.age}} </h3> </li>
+  </ul>
+  {% endblock %}
+</body>
+</html>

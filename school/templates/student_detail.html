@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<title>Student detail</title>
+</head> 
+<body>
+  {% block content %}
+  <div>
+  <a href="{% url 'students_list' %}"><h2> Back to students </h2> </a>
+  <ul>
+   <li> <h3> Name:  {{student.first_name}} </h3> </li>
+   <li> <h3> Surname:  {{student.last_name}} </h3> </li>
+   <li> <h3> Grade:  {{student.grade}} </h3> </li>
+   <li> <h3> Age:  {{student.age}} </h3> </li>
+  </ul>
+  </div>
+  {% endblock %}
+</body>
+</html>

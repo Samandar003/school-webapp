@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+  {% block content %}
+<title>Subjects</title>
+</head>
+<body>
+  <h2> Subjects are: </h2>
+  <form>
+    <input name="search" value="{{search}}" placeholder="search subjects...">
+    <button type="submit">Search</button>
+  </form>
+  
+  <ol>
+    {% for subject in subjects %}
+    <li> <a href="{% url 'subject_detail' subject.pk %}"> {{subject.name}} </a> </li>
+    {% endfor %}
+  </ol>
+  {% endblock %}
+</body>
+</html>
